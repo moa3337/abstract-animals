@@ -1,6 +1,8 @@
 package org.learning.java;
 
-class Passerotto extends AbstractAnimale {
+import org.learning.java.IVolante;
+
+class Passerotto extends AbstractAnimale implements IVolante {
     // Implemento metodo mangia del passerotto
     void mangia() {
         System.out.println("Il passerotto mangia i semi");
@@ -9,5 +11,10 @@ class Passerotto extends AbstractAnimale {
     // Implemento metodo verso passerrotto
     void verso() {
         System.out.println("cip-cip");
+    }
+
+    //
+    public void vola() {
+        System.out.println("Posso volare");
     }
 }

@@ -8,8 +8,24 @@ public class RegnoAnimale {
         Aquila aquila = new Aquila();
         Delfino delfino = new Delfino();
 
-        // Utilizzo metodi implementati
+        // Array di animali
+        AbstractAnimale[] animali = {cane, passerotto, aquila, delfino};
 
+        // Ciclo gli animali dell'array
+        for (AbstractAnimale animale : animali) {
+            if (animale instanceof IVolante) {
+                faiVolare((IVolante) animale);
+            } else if (animale instanceof INuotante) {
+                faiNuotare((INuotante) animale);
+            }
+        }
+/*
+        // IChiamate metodi interfacce
+        faiVolare((IVolante) passerotto);
+        faiNuotare((INuotante) delfino);
+
+        // Utilizzo metodi implementati
+*/
         // Cane
         cane.mangia();
         cane.verso();
@@ -29,5 +45,15 @@ public class RegnoAnimale {
         delfino.mangia();
         delfino.verso();
         delfino.dormi();
+    }
+
+    // Metodo faiVolare per implementare interfaccia
+    public static void faiVolare(IVolante animale) {
+        animale.vola();
+    }
+
+    // Metodo faiNuotare per implementare interfaccia
+    public static void faiNuotare(INuotante animale) {
+        animale.nuota();
     }
 }

@@ -1,5 +1,6 @@
 package org.learning.java;
 
+// Classe astratta Animale
 public abstract class AbstractAnimale {
     // Metodo astratto per cibo animale
     abstract void mangia();
